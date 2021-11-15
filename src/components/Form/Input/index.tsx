@@ -7,17 +7,17 @@ interface IInput extends InputHTMLAttributes<HTMLInputElement> {
   icon?: React.ComponentType<IconBaseProps>;
 }
 
-const Input: React.FC<IInput> = ({ label, name, icon: Icon, ...rest }) => {
+const Input: React.FC<IInput> = ({ label, id, icon: Icon, ...rest }) => {
   const [value, setValue] = useState("");
   const [hasInputError, setHasInputError] = useState(false);
 
   return (
     <div className={styles.container}>
-      {label && (<label htmlFor={name}>{label}</label>)}
+      {label && (<label htmlFor={id}>{label}</label>)}
       <div className={`${styles.content} ${hasInputError ? styles.inputError : ''}`}>
         {Icon && <Icon size={20} />}
         <input
-          name={name}
+          id={id}
           {...rest}
           value={value}
           onChange={e => setValue(e.target.value)}

@@ -1,13 +1,23 @@
 .buttonClass {
   width: 100%;
-  height: 40px;
   border: 0;
   border-radius: 10px;
   background: #ff4785;
   color: #fff;
   margin-top: 10px;
+  padding: 10px;
+  font-weight: bold;
 
   &:hover {
     background: #fa2d72;
+  }
+}
+
+.buttonClassSecondary {
+  background: #e7e7e7;
+  color: #252525;
+
+  &:hover {
+    background: #b3b3b3;
   }
 }
